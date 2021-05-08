@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <meta charset="utf-8">
-    <title> PAP: Auckland </title>
+    <title> PAP | Auckland </title>
   </head>
 
   <body>
