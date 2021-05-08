@@ -11,7 +11,7 @@ $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
  ?>
  <head>
- <title>Informações Tempo STS</title>
+ <title>Análise | Auckland</title>
  <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
  <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
  <script type="text/javascript">
@@ -79,9 +79,32 @@ $row = mysqli_fetch_assoc($result);
  });
  </script>
 
+
  </head>
  <body>
- <div class="chartContainer"></div>
-  <div class="chartContainer2"></div>
+     <div class="chartContainer"></div>
+      <div class="chartContainer2"></div>
+     <div id="coluna-peso">
+
+       <table>
+           <tr>
+            <td>
+             <p>One</p>
+             </td>
+            <td>
+             <p>Two</p>
+             </td>
+           </tr>
+           <tr>
+            <td>
+             <p>Three</p>
+             </td>
+            <td >
+             <p>Four</p>
+             </td>
+           </tr>
+          </tbody>
+         </table>
+       </div>
  </body>
 <?php } ?>

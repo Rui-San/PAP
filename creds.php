@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 
     <meta charset="utf-8">
-<title>PAP: Auckland</title>
+<title>Créditos | Auckland</title>
   </head>
   <body>
     <?php

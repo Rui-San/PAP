@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PAP: Auckland</title>
+    <title>Dados | Auckland</title>
     <script language="javascript" src="jquery-3.5.1.min.js"></script>
     <script language="javascript">
       $(document).ready(function(){

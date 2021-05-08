@@ -241,15 +241,27 @@ border-bottom: 1px solid black;
 .chartContainer{
   margin-top: 14px;
   margin-left: 10px;
-margin-right: 10px;
-width: 50%;
-height: 30%;
+  margin-right: 10px;
+  height: 30%;
+  width: 40%;
 }
 
 .chartContainer2{
   margin-top: 14px;
   margin-left: 10px;
-margin-right: 10px;
-width: 50%;
-height: 30%;
+  margin-right: 10px;
+  height: 30%;
+  width: 40%;
+
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
