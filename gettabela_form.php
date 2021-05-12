@@ -22,51 +22,49 @@
   if (is_numeric($filtro_id)) {
     require('config.php');
     $sql = "SELECT ID, Nome, Idade, Sexo, NIF, Localidade, Morada, Contacto FROM resultados WHERE ID = $filtro_id";
+    //sugiro a colocares os campos das tabelas e variáveis tudo em minúsculas
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
       while($row = mysqli_fetch_assoc($result)) {
-       echo "<tr>";
-         echo "<td class='textbxlabel'> Nome </td>";
-         echo "<td> <div   ><input class='textbx' type='text' name='nome' value='" . $row["Nome"] . "'></div> </td>";
-       echo "</tr>";
-       echo "<tr>";
-         echo "<td class='textbxlabel' > Idade </td>";
-         echo "<td><div><input class='textbx' type='number' name='idade' value='".$row["Idade"]."'></div></td>";
-       echo "</tr>";
-       echo "<tr>";
-         echo "<td class='textbxlabel' > Sexo </td>";
-         echo "<td> <div   ><input class='textbx' type='text' name='sexo' value='" . $row["Sexo"] . "' pattern='[M,F,f,m]' required='required' maxlenght='1'> </div> </td>";
-       echo "</tr>";
-       echo "<tr>";
-         echo "<td class='textbxlabel' > NIF </td>";
-         echo "<td> <div   ><input class='textbx' type='number' name='nif' value='" . $row["NIF"] . "' pattern='[0-9]' required='required' maxlenght='9'> </div> </td>";
-       echo "</tr>";
-       echo "<tr>";
-         echo "<td class='textbxlabel' > Localidade </td>";
-         echo "<td> <div   ><input class='textbx' type='text' name='localidade' value='" . $row["Localidade"] . "' required='required'> </div> </td>";
-       echo "</tr>";
-       echo "<tr>";
-         echo "<td class='textbxlabel' > Morada </td>";
-         echo "<td> <div   ><input class='textbx' type='text' name='morada'  value='" . $row["Morada"] . "' required='required'> </div> </td>";
-       echo "</tr>";
-       echo "<tr>";
-         echo "<td class='textbxlabel' > Contacto </td>";
-         echo "<td> <div   ><input class='textbx' type='number' name='contacto' value='" . $row["Contacto"] . "' pattern='[0-9]' maxlenght='9'> </div> </td>";
-       echo "</tr>";
-       echo "<tr class><td class='analisetablecell'><a href='InfoGraf_User.php?ID=".$filtro_id."'>Análise</a></td><td class='editartablecell' ><button class='textbx'  type='submit' name='Submit' value='".$filtro_id."'>Editar</button></td></tr>";
-
+       ?>
+        <tr>
+          <td class='textbxlabel'> Nome </td>
+          <td><div><input class='textbx' type='text' name='nome' value="<?php echo $row['Nome'] ?>" required='required'></div></td>
+        </tr>
+        <tr>
+          <td class='textbxlabel'> Idade </td>
+          <td><div><input class='textbx' type='number' name='idade' value="<?php echo $row['Nome'] ?>" required='required'></div></td>
+        </tr>
+        <tr>
+          <td class='textbxlabel'> Sexo </td>
+          <td><div><input class='textbx' type='text' name='sexo' value="<?php echo $row['Nome'] ?>" required='required' pattern='[M,F,f,m]' maxlenght='1'></div></td>
+        </tr>
+        <tr>
+          <td class='textbxlabel'> NIF </td>
+          <td><div><input class='textbx' type='number' name='nif' value="<?php echo $row['Nome'] ?>" pattern='[0-9]' required='required' maxlenght='9'></div></td>
+        </tr>
+        <tr>
+          <td class='textbxlabel'> Localidade </td>
+          <td><div><input class='textbx' type='text' name='localidade' value="<?php echo $row['Nome'] ?>" required='required'></div></td>
+        </tr>
+        <tr>
+          <td class='textbxlabel'> Morada </td>
+          <td><div><input class='textbx' type='text' name='nome' value="<?php echo $row['Nome'] ?>" required='required'></div></td>
+        </tr>
+        <tr>
+          <td class='textbxlabel'> Contacto </td>
+          <td><div><input class='textbx' type='number' name='nome' value="<?php echo $row['Nome'] ?>" required='required' pattern='[0-9]' maxlenght='9'></div></td>
+        </tr>
+        <tr class><td class='analisetablecell'><a href='InfoGraf_User.php?ID=<?php echo $filtro_id; ?>'>Análise</a></td><td class='editartablecell' ><button class='textbx'  type='submit' name='Submit' value='<?php echo $filtro_id; ?>'>Editar</button></td></tr>";
+        <?php
       }
     } else {
       echo " O ID que procura não existe! ";
-
     }
   } else {
     echo "Insira um valor numérico.";
   }
-
-
-
 ?>
 
 </table>
